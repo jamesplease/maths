@@ -5,9 +5,7 @@ export default class CodeHighlighter extends Component {
   render() {
     const { language, value, inline } = this.props;
 
-    console.log('wat', language, value, inline);
-
-    if (language !== 'latex') {
+    if (language && language !== 'latex') {
       return value;
     }
 

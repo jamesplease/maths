@@ -16,7 +16,8 @@ export default class Markdown extends Component {
         source={markdownText}
         className="markdown"
         renderers={{
-          code: Latex
+          code: Latex,
+          inlineCode: Latex
         }}
       />
     );
