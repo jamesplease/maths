@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactMarkdown from "react-markdown";
 import { fetchDedupe } from "fetch-dedupe";
 import Latex from "./latex";
+import Link from './link';
 
 export default class Markdown extends Component {
   render() {
@@ -16,6 +17,7 @@ export default class Markdown extends Component {
         source={markdownText}
         className={`${className} markdown`}
         renderers={{
+          link: Link,
           code: Latex,
           inlineCode: Latex
         }}

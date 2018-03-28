@@ -9,7 +9,7 @@ export default (props) => {
   return (
     <TopicSwitch
       {...props}
-      sectionName="Foundation"
+      sectionName="Foundations"
       key="foundations"
       topicUrl="foundations"
       pages={foundationPages}

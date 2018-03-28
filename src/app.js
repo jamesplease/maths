@@ -3,11 +3,12 @@ import './app.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ScrollToTop from './common/scroll-to-top';
 import Header from './common/header';
+import Nav from './common/nav';
+import Footer from './common/footer';
 import notFoundUrl from './common/not-found.md';
 import Markdown from './common/markdown';
 import introductionUrl from './pages/introduction.md';
 import TopicRoutes from './topics/routes';
-import wolframAlphaUrl from './images/wolfram-alpha.svg';
 
 class App extends Component {
   render() {
@@ -15,19 +16,23 @@ class App extends Component {
       <BrowserRouter>
         <ScrollToTop>
           <Header />
-          <div className="contents">
-            <Switch>
-              <Route
-                exact
-                path="/"
-                render={() => <Markdown markdownUrl={introductionUrl} />}
-              />
-              <Route component={TopicRoutes}/>
-              <Route
-                render={() => <Markdown markdownUrl={notFoundUrl} />}
-              />
-            </Switch>
+          <div className="app_contents">
+            <Nav/>
+            <div className="app_mainBody">
+              <Switch>
+                <Route
+                  exact
+                  path="/"
+                  render={() => <Markdown markdownUrl={introductionUrl} />}
+                />
+                <Route component={TopicRoutes}/>
+                <Route
+                  render={() => <Markdown markdownUrl={notFoundUrl} />}
+                />
+              </Switch>
+            </div>
           </div>
+          <Footer />
         </ScrollToTop>
       </BrowserRouter>
     );

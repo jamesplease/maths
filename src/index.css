@@ -1,7 +1,14 @@
 :root {
-  --appWidth: 1440px;
+  --appWidth: 960px;
   --appPadding: 20px;
   --maxTextWidth: 700px;
+
+  --mainColor: #28A5FF;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
@@ -14,4 +21,10 @@ body {
   max-width: var(--appWidth);
   padding: 0 var(--appPadding);
   margin: 0 auto;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
