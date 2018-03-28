@@ -1,19 +1,50 @@
 import React, { Component } from 'react';
 import './app.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import ScrollToTop from './common/scroll-to-top';
+import Header from './common/header';
+import notFoundUrl from './common/not-found.md';
 import Markdown from './common/markdown';
-import introductionUrl from './guides/introduction.md';
+import introductionUrl from './pages/introduction.md';
+import TopicRoutes from './topics/routes';
+import wolframAlphaUrl from './images/wolfram-alpha.svg';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <Markdown markdownUrl={introductionUrl} />
-      </div>
+      <BrowserRouter>
+        <ScrollToTop>
+          <Header />
+          <div className="contents">
+            <Switch>
+              <Route
+                exact
+                path="/"
+                render={() => <Markdown markdownUrl={introductionUrl} />}
+              />
+              <Route component={TopicRoutes}/>
+              <Route
+                render={() => <Markdown markdownUrl={notFoundUrl} />}
+              />
+            </Switch>
+          </div>
+        </ScrollToTop>
+      </BrowserRouter>
     );
   }
 }
 
 export default App;
+
+// {/* <Route path="/components" component={Components} />
+// <Route component={NotFound} /> */}
+
+
+// <div className="App">
+//         <header className="App-header">
+//           <h1 className="App-title">Welcome to React</h1>
+//         </header>
+//         <img src={wolframAlphaUrl} width="25px" alt="Wolfram|Alpha"/> View in Wolfram Alpha
+//         <Markdown markdownUrl={introductionUrl} />
+//       </div>
+

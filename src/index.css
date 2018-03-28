@@ -1,5 +1,17 @@
+:root {
+  --appWidth: 1440px;
+  --appPadding: 20px;
+  --maxTextWidth: 700px;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+.contents {
+  max-width: var(--appWidth);
+  padding: 0 var(--appPadding);
+  margin: 0 auto;
 }

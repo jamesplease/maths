@@ -1,0 +1,14 @@
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.6rem;
+}
+
+.markdown {
+  max-width: var(--maxTextWidth);
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}

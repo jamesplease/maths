@@ -1,0 +1,15 @@
+.header {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #ddd;
+}
+
+.header_link {
+  text-decoration: none;
+  color: #222;
+}
+
+.header_title {
+  padding: 0;
+  margin: 0;
+}

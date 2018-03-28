@@ -5,7 +5,7 @@ import Latex from "./latex";
 
 export default class Markdown extends Component {
   render() {
-    const { markdownText } = this.state;
+    const { markdownText, className = '' } = this.state;
 
     if (!markdownText) {
       return null;
@@ -14,7 +14,7 @@ export default class Markdown extends Component {
     return (
       <ReactMarkdown
         source={markdownText}
-        className="markdown"
+        className={`${className} markdown`}
         renderers={{
           code: Latex,
           inlineCode: Latex
