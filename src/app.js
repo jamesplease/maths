@@ -3,7 +3,6 @@ import './app.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ScrollToTop from './common/scroll-to-top';
 import Header from './common/header';
-import Nav from './common/nav';
 import Footer from './common/footer';
 import notFoundUrl from './common/not-found.md';
 import Markdown from './common/markdown';
@@ -17,7 +16,6 @@ class App extends Component {
         <ScrollToTop>
           <Header />
           <div className="app_contents">
-            <Nav/>
             <div className="app_mainBody">
               <Switch>
                 <Route

@@ -1,6 +1,5 @@
 import React from 'react';
 import './link.css';
-import wikipediaLogoUrl from '../images/wikipedia-logo.svg';
 
 const anchor = document.createElement('a');
 
@@ -15,7 +14,6 @@ export default ({ href, children }) => {
   if (hostname === 'en.wikipedia.org') {
     return (
       <a href={href} className="link_wikipediaLink">
-        <img src={wikipediaLogoUrl} width="20" className="link_wikipediaLogo"/>
         {children}
       </a>
     );

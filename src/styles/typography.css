@@ -3,8 +3,8 @@
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.6rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
 }
 
 .markdown {
@@ -20,6 +20,7 @@ a {
 
 .markdown h1,
 .primaryHeader {
+  font-family: 'Abhaya Libre';
   font-size: 2.9rem;
 }
 

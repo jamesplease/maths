@@ -1,23 +1,6 @@
 .link_wikipediaLink {
   position: relative;
-  border-radius: 3px;
-  padding: 1px 3px;
-}
-
-.link_wikipediaLink:after {
-  content: '';
-  background: #F0F6F9;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: calc(100%);
-  height: calc(100%);
-}
-
-.link_wikipediaLink:hover:after {
-  opacity: 1;
+  border-bottom: 1px dashed var(--mainColor);
 }
 
 .link_wikipediaLogo {

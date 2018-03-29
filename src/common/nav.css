@@ -1,27 +1,17 @@
-.nav {
-  min-width: 250px;
-}
-
-.nav_list,
-.nav_subNav {
+.nav_list {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.nav_subNav {
-  margin-left: 20px;
+  display: flex;
 }
 
 .nav_listItem {
-  margin-bottom: 20px;
+  margin-right: 40px;
 }
 
 .nav_link {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #222;
   display: block;
-  margin-bottom: 10px;
-}
-
-.nav_subNavItem {
-  margin-bottom: 15px;
 }

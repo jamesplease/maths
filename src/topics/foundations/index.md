@@ -1,3 +1,3 @@
 # Foundations
 
-The foundations of stuff.
+The foundations of mathematics.

@@ -1,4 +1,4 @@
-import setUrl from './set.md';
+import setUrl from './pages/set.md';
 import TopicPage from '../topic-page';
 
 export default [

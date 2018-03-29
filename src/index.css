@@ -6,6 +6,12 @@
   --mainColor: #28A5FF;
 }
 
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
