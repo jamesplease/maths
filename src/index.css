@@ -24,7 +24,7 @@ body {
 }
 
 .contents {
-  max-width: var(--appWidth);
+  width: var(--appWidth);
   padding: 0 var(--appPadding);
   margin: 0 auto;
 }
