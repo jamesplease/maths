@@ -15,22 +15,19 @@ class App extends Component {
       <BrowserRouter>
         <ScrollToTop>
           <Header />
-          <div className="contents">
-            <div className="app_mainBody">
-              <Switch>
-                <Route
-                  exact
-                  path="/"
-                  render={() => <Markdown markdownUrl={introductionUrl} />}
-                />
-                <Route component={TopicRoutes}/>
-                <Route
-                  render={() => <Markdown markdownUrl={notFoundUrl} />}
-                />
-              </Switch>
-            </div>
+          <div className="app_mainBody">
+            <Switch>
+              <Route
+                exact
+                path="/"
+                render={() => <Markdown markdownUrl={introductionUrl} />}
+              />
+              <Route component={TopicRoutes}/>
+              <Route
+                render={() => <Markdown markdownUrl={notFoundUrl} />}
+              />
+            </Switch>
           </div>
-          <Footer />
         </ScrollToTop>
       </BrowserRouter>
     );

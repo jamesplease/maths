@@ -1,7 +1,7 @@
 .footer {
   font-size: 1.4rem;
   color: #999;
-  height: 50px;
-  line-height: 50px;
+  height: var(--footerHeight);
+  line-height: var(--footerHeight);
   border-top: 1px solid #ddd;
 }

@@ -7,14 +7,12 @@ export default class Header extends Component {
   render() {
     return (
       <header className="header">
-        <div className="contents">
-          <h1 className="header_title">
-            <Link to="/" className="header_link">
-              Principia
-            </Link>
-          </h1>
-          <Nav />
-        </div>
+        <h1 className="header_title">
+          <Link to="/" className="header_link">
+            Principia
+          </Link>
+        </h1>
+        <Nav />
       </header>
     );
   }

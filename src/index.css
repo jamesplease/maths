@@ -2,8 +2,12 @@
   --appWidth: 960px;
   --appPadding: 20px;
   --maxTextWidth: 700px;
+  --headerHeight: 60px;
+  --footerHeight: 50px;
+  --headerMargin: 30px;
+  --sideNavWidth: 300px;
 
-  --mainColor: #28A5FF;
+  --mainColor: #5f37d1;
 }
 
 *,

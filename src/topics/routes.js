@@ -1,8 +1,20 @@
 import React, { Fragment } from 'react';
 import { Switch, Route } from "react-router-dom";
 import Markdown from '../common/markdown';
+import SideNav from '../common/side-nav';
 import foundationsSection from './foundations/section';
 import linearAlgebraSection from './linear-algebra/section';
+
+function sectionWithNav(component, navProps) {
+  return (
+    <Fragment>
+      <SideNav {...navProps}/>
+      <div className="contents">
+        {component}
+      </div>
+    </Fragment>
+  )
+}
 
 function routesFromSection(section, match) {
   const landingPageRoute = (
@@ -11,9 +23,11 @@ function routesFromSection(section, match) {
         exact
         path={`/${section.sectionKey}`}
         render={(props) => (
-          <section.landingPageComponent
+          sectionWithNav(<section.landingPageComponent
             {...props}
-            pages={section.pages}/>
+            pages={section.pages}/>, {
+              section, match
+            })
         )}
       />
   );
@@ -24,11 +38,15 @@ function routesFromSection(section, match) {
         key={`${page.name}-main`}
         exact
         path={`/${section.sectionKey}${page.url}`}
-        render={props => <page.component
-          {...props}
-          {...page}
-          sectionUrl={`/${section.sectionKey}`}
-          sectionName={section.sectionName} />}
+        render={props => (
+          sectionWithNav(<page.component
+            {...props}
+            {...page}
+            sectionUrl={`/${section.sectionKey}`}
+            sectionName={section.sectionName} />, {
+              section, match
+            })
+        )}
       />
     );
   });
