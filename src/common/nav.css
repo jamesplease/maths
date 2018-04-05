@@ -6,12 +6,24 @@
 }
 
 .nav_listItem {
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
 .nav_link {
+  height: var(--headerHeight);
+  line-height: var(--headerHeight);
   font-size: 1.6rem;
   font-weight: 600;
   color: #222;
   display: block;
+  padding: 0 10px;
+}
+
+.nav_link:hover {
+  color: var(--mainColor);
+}
+
+.nav_link.active {
+  color: var(--mainColor);
+  border-bottom: 3px solid var(--mainColor);
 }

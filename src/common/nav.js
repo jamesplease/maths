@@ -17,16 +17,6 @@ export default class Nav extends Component {
               Linear Algebra
             </NavLink>
           </li>
-          <li className="nav_listItem">
-            <NavLink to="/calculus" className="nav_link">
-              Calculus
-            </NavLink>
-          </li>
-          <li className="nav_listItem">
-            <NavLink to="/real-analysis" className="nav_link">
-              Real Analysis
-            </NavLink>
-          </li>
         </ul>
       </nav>
     );
