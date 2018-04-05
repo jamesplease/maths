@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { Switch, Route } from "react-router-dom";
+import DocumentTitle from 'react-document-title';
 import SideNav from '../common/side-nav';
 import Footer from '../common/footer';
 import foundationsSection from './foundations/section';
@@ -18,36 +19,42 @@ function sectionWithNav(component, navProps) {
 }
 
 function routesFromSection(section) {
+  console.log('wat', section);
   const landingPageRoute = (
     <Route
         key={`${section.sectionName}-index`}
         exact
         path={`/${section.sectionKey}`}
         render={(props) => (
-          sectionWithNav(<section.landingPageComponent
-            {...props}/>, {
-              section,
-              ...props
-            })
+          <DocumentTitle title={`${section.sectionName} - Principia`}>
+            {sectionWithNav(<section.landingPageComponent
+              {...props}/>, {
+                section,
+                ...props
+              })
+            }
+          </DocumentTitle>
         )}
       />
   );
 
-  const topics = section.topics.map(topics => {
+  const topics = section.topics.map(topic => {
     return (
       <Route
-        key={`${topics.name}-main`}
+        key={`${topic.name}-main`}
         exact
-        path={`/${section.sectionKey}${topics.url}`}
+        path={`/${section.sectionKey}${topic.url}`}
         render={props => (
-          sectionWithNav(<topics.component
-            {...props}
-            {...topics}
-            sectionUrl={`/${section.sectionKey}`}
-            sectionName={section.sectionName} />, {
-              section,
-              ...props
-            })
+          <DocumentTitle title={`${topic.name} - Principia`}>
+            {sectionWithNav(<topic.component
+              {...props}
+              {...topic}
+              sectionUrl={`/${section.sectionKey}`}
+              sectionName={section.sectionName} />, {
+                section,
+                ...props
+              })}
+          </DocumentTitle>
         )}
       />
     );

@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import DocumentTitle from 'react-document-title';
 import ScrollToTop from './common/scroll-to-top';
 import Header from './common/header';
 import Footer from './common/footer';
@@ -11,29 +12,31 @@ import TopicRoutes from './topics/routes';
 class App extends Component {
 render() {
     return (
-      <BrowserRouter>
-        <ScrollToTop>
-          <Header />
-          <Switch>
-            <Route
-              exact
-              path="/"
-              render={() => (
-                <Fragment>
-                  <main className="mainContent mainContent_noNav">
-                    <Markdown markdownUrl={introductionUrl} />
-                  </main>
-                  <Footer noSideNav />
-                </Fragment>
-              )}
-            />
-            <Route component={TopicRoutes}/>
-            <Route
-              render={() => <Markdown markdownUrl={notFoundUrl} />}
-            />
-          </Switch>
-        </ScrollToTop>
-      </BrowserRouter>
+      <DocumentTitle title="Principia">
+        <BrowserRouter>
+          <ScrollToTop>
+            <Header />
+            <Switch>
+              <Route
+                exact
+                path="/"
+                render={() => (
+                  <Fragment>
+                    <main className="mainContent mainContent_noNav">
+                      <Markdown markdownUrl={introductionUrl} />
+                    </main>
+                    <Footer noSideNav />
+                  </Fragment>
+                )}
+              />
+              <Route component={TopicRoutes}/>
+              <Route
+                render={() => <Markdown markdownUrl={notFoundUrl} />}
+              />
+            </Switch>
+          </ScrollToTop>
+        </BrowserRouter>
+      </DocumentTitle>
     );
   }
 }

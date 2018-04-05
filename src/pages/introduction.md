@@ -1,3 +1,3 @@
-# Introduction
+# A Reference for Mathematics, Physics, and Philosophy
 
-A reference website for topics in mathematics, physics, and philosophy.
+Principia is a website that covers a few topics in these subjects that interest me.

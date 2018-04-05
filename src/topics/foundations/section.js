@@ -8,7 +8,7 @@ import LandingPage from '../landing-page';
 
 export default {
   sectionKey: 'math',
-  sectionName: 'Foundations of Mathematics',
+  sectionName: 'Mathematics',
   landingPageComponent: (props) => (
     <LandingPage
       markdownUrl={landingPageUrl}

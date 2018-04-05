@@ -53,6 +53,7 @@
   display: block;
   padding: 7px var(--appPadding) 7px 46px;
   line-height: 2.2rem;
+  position: relative;
 }
 
 .sideNav_subListLink:hover {

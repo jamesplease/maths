@@ -6,6 +6,7 @@
     "classnames": "^2.2.5",
     "fetch-dedupe": "^3.0.0-beta1",
     "react": "^16.2.0",
+    "react-document-title": "^2.0.3",
     "react-dom": "^16.2.0",
     "react-katex": "^2.0.1",
     "react-markdown": "^3.3.0",
