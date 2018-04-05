@@ -5,4 +5,5 @@
   padding: 0 var(--appPadding);
   border-top: 1px solid #ddd;
   grid-area: footer;
+  grid-column: span 2;
 }

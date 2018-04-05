@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Switch, Route } from "react-router-dom";
 import SideNav from '../common/side-nav';
+import Footer from '../common/footer';
 import foundationsSection from './foundations/section';
 import linearAlgebraSection from './linear-algebra/section';
 
@@ -11,6 +12,7 @@ function sectionWithNav(component, navProps) {
       <main className="mainContent">
         {component}
       </main>
+      <Footer />
     </Fragment>
   )
 }

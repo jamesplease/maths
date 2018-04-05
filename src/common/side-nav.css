@@ -74,4 +74,11 @@
   right: 15px;
   top: 8px;
   font-size: 19px;
+  will-change: transform;
+  transform: translate3d(0);
+  transition: transform 200ms;
+}
+
+.sideNav_openIndicator-closed {
+  transform: rotate(-90deg);
 }
