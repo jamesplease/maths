@@ -13,8 +13,3 @@ export default class TopicPage extends Component {
     );
   }
 }
-
-// // <Link to={sectionUrl} className="topicPage_backLink">
-//           <i className="zmdi zmdi-chevron-left topicPage_backChevron"/>
-//           {sectionName}
-//         </Link> 
