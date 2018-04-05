@@ -9,6 +9,7 @@ export default class Header extends Component {
       <header className="header">
         <h1 className="header_title">
           <Link to="/" className="header_link">
+          <span className="logo_emoji" role="img" aria-label="book">🍎</span>
             Principia
           </Link>
         </h1>

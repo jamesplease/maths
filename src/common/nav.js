@@ -8,13 +8,18 @@ export default class Nav extends Component {
       <nav className="nav">
         <ul className="nav_list">
           <li className="nav_listItem">
-            <NavLink to="/foundations" className="nav_link">
-              Foundations
+            <NavLink to="/math" className="nav_link">
+              Mathematics
             </NavLink>
           </li>
           <li className="nav_listItem">
-            <NavLink to="/linear-algebra" className="nav_link">
-              Linear Algebra
+            <NavLink to="/physics" className="nav_link">
+              Physics
+            </NavLink>
+          </li>
+          <li className="nav_listItem">
+            <NavLink to="/philosophy" className="nav_link">
+              Philosophy
             </NavLink>
           </li>
         </ul>

@@ -7,18 +7,6 @@ export default {
   sectionKey: 'linear-algebra',
   sectionName: 'Linear Algebra',
   landingPageComponent: () => (<Markdown markdownUrl={landingPageUrl}/>),
-  pages: [
-    // {
-    //   name: 'Sets',
-    //   url: '/sets',
-    //   component: TopicPage,
-    //   markdownUrl: setUrl
-    // },
-    // {
-    //   name: 'Set Theory',
-    //   url: '/set-theory',
-    //   component: TopicPage,
-    //   markdownUrl: setTheoryUrl
-    // }
-  ]
+  topics: [],
+  guides: []
 };

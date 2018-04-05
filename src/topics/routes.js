@@ -25,8 +25,7 @@ function routesFromSection(section) {
         path={`/${section.sectionKey}`}
         render={(props) => (
           sectionWithNav(<section.landingPageComponent
-            {...props}
-            pages={section.pages}/>, {
+            {...props}/>, {
               section,
               ...props
             })
@@ -34,16 +33,16 @@ function routesFromSection(section) {
       />
   );
 
-  const pages = section.pages.map(page => {
+  const topics = section.topics.map(topics => {
     return (
       <Route
-        key={`${page.name}-main`}
+        key={`${topics.name}-main`}
         exact
-        path={`/${section.sectionKey}${page.url}`}
+        path={`/${section.sectionKey}${topics.url}`}
         render={props => (
-          sectionWithNav(<page.component
+          sectionWithNav(<topics.component
             {...props}
-            {...page}
+            {...topics}
             sectionUrl={`/${section.sectionKey}`}
             sectionName={section.sectionName} />, {
               section,
@@ -56,7 +55,7 @@ function routesFromSection(section) {
 
   return [
     landingPageRoute,
-    ...pages
+    ...topics
   ];
 }
 
