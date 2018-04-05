@@ -8,7 +8,6 @@ body {
 }
 
 .markdown {
-  max-width: var(--maxTextWidth);
   font-size: 1.6rem;
   line-height: 2.6rem;
 }
@@ -21,7 +20,8 @@ a {
 .markdown h1,
 .primaryHeader {
   font-family: 'Abhaya Libre';
-  font-size: 2.9rem;
+  font-size: 3.1rem;
+  font-weight: 600;
 }
 
 .markdown h1:first-child,
@@ -32,4 +32,10 @@ a {
 .markdown h2,
 .secondaryHeader {
   font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.markdown h3,
+.tertiaryHeader {
+  font-weight: 600;
 }

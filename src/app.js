@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './app.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ScrollToTop from './common/scroll-to-top';
 import Header from './common/header';
@@ -15,19 +14,22 @@ class App extends Component {
       <BrowserRouter>
         <ScrollToTop>
           <Header />
-          <div className="app_mainBody">
-            <Switch>
-              <Route
-                exact
-                path="/"
-                render={() => <Markdown markdownUrl={introductionUrl} />}
-              />
-              <Route component={TopicRoutes}/>
-              <Route
-                render={() => <Markdown markdownUrl={notFoundUrl} />}
-              />
-            </Switch>
-          </div>
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <main className="mainContent mainContent_noNav">
+                  <Markdown markdownUrl={introductionUrl} />
+                </main>
+              )}
+            />
+            <Route component={TopicRoutes}/>
+            <Route
+              render={() => <Markdown markdownUrl={notFoundUrl} />}
+            />
+          </Switch>
+          <Footer/>
         </ScrollToTop>
       </BrowserRouter>
     );

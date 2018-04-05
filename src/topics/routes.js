@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import { Switch, Route } from "react-router-dom";
-import Markdown from '../common/markdown';
 import SideNav from '../common/side-nav';
 import foundationsSection from './foundations/section';
 import linearAlgebraSection from './linear-algebra/section';
@@ -9,14 +8,14 @@ function sectionWithNav(component, navProps) {
   return (
     <Fragment>
       <SideNav {...navProps}/>
-      <div className="contents">
+      <main className="mainContent">
         {component}
-      </div>
+      </main>
     </Fragment>
   )
 }
 
-function routesFromSection(section, match) {
+function routesFromSection(section) {
   const landingPageRoute = (
     <Route
         key={`${section.sectionName}-index`}
@@ -26,7 +25,8 @@ function routesFromSection(section, match) {
           sectionWithNav(<section.landingPageComponent
             {...props}
             pages={section.pages}/>, {
-              section, match
+              section,
+              ...props
             })
         )}
       />
@@ -44,7 +44,8 @@ function routesFromSection(section, match) {
             {...page}
             sectionUrl={`/${section.sectionKey}`}
             sectionName={section.sectionName} />, {
-              section, match
+              section,
+              ...props
             })
         )}
       />
@@ -58,12 +59,10 @@ function routesFromSection(section, match) {
 }
 
 export default (props) => {
-  const {match} = props;
-
   return (
     <Switch>
-      {routesFromSection(foundationsSection, match)}
-      {routesFromSection(linearAlgebraSection, match)}
+      {routesFromSection(foundationsSection)}
+      {routesFromSection(linearAlgebraSection)}
     </Switch>
   );
 }

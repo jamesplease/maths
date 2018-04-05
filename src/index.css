@@ -1,11 +1,11 @@
 :root {
   --appWidth: 960px;
   --appPadding: 20px;
-  --maxTextWidth: 700px;
   --headerHeight: 60px;
   --footerHeight: 50px;
-  --headerMargin: 30px;
+  --headerMargin: 35px;
   --sideNavWidth: 300px;
+  --sideNavMargin: 60px;
 
   --mainColor: #5f37d1;
 }
@@ -27,14 +27,27 @@ body {
   font-family: sans-serif;
 }
 
-.contents {
-  width: var(--appWidth);
-  padding: 0 var(--appPadding);
-  margin: 0 auto;
+.mainContent {
+  grid-area: main;
+  width: 100%;
+  max-width: 780px;
+  padding: 0 40px;
+  margin: var(--headerMargin) auto 30px;
+}
+
+.mainContent_noNav {
+  grid-area: auto;
+  grid-column: span 2;
 }
 
 #root {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
+
+  display: grid;
+  grid-template-areas:
+      "header header"
+      "sidenav main"
+      "sidenav footer";
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: var(--headerHeight) 10fr var(--footerHeight);
 }

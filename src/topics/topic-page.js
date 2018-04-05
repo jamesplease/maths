@@ -1,11 +1,10 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
 import './topic-page.css';
 import Markdown from '../common/markdown';
 
 export default class TopicPage extends Component {
   render() {
-    const { markdownUrl, sectionUrl, sectionName } = this.props;
+    const { markdownUrl } = this.props;
 
     return (
       <Fragment>

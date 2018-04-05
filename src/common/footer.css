@@ -1,7 +1,8 @@
 .footer {
   font-size: 1.4rem;
   color: #999;
-  height: var(--footerHeight);
   line-height: var(--footerHeight);
+  padding: 0 var(--appPadding);
   border-top: 1px solid #ddd;
+  grid-area: footer;
 }

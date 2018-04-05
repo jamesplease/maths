@@ -1,17 +1,77 @@
 .sideNav {
-  width: var(--sideNavWidth);
+  /* width: var(--sideNavWidth);
   position: fixed;
   top: var(--headerHeight);
   left: 0;
-  height: calc(100% - var(--headerHeight));
+  height: calc(100% - var(--headerHeight)); */
   background-color: #f9f9f9;
+  grid-area: sidenav;
   margin: 0;
-  padding: var(--headerMargin) var(--appPadding) 20px;
+  padding-top: var(--headerMargin);
+  /* padding: var(--headerMargin) var(--appPadding) 30px; */
 }
 
+.sideNav_subList,
 .sideNav_list {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.sideNav_emoji {
+  font-size: 1.8rem;
+  padding-right: 3px;
+}
+
+.sideNav_listSectionBtn {
+  color: #333;
+  font-weight: 600;
   font-size: 1.6rem;
+  display: block;
+  padding: 5px var(--appPadding);
+  margin: 0;
+  border: 0px;
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+}
+
+.sideNav_listSectionBtn:hover {
+  background: #eee;
+}
+
+.sideNav_listSection {
+  margin-bottom: 20px;
+}
+
+.sideNav_subListLink {
+  color: #333;
+  font-size: 1.5rem;
+  display: block;
+  padding: 7px var(--appPadding) 7px 46px;
+  line-height: 2.2rem;
+}
+
+.sideNav_subListLink:hover {
+  background-color: #ece9f6;
+  color: var(--mainColor);
+}
+
+.sideNav_subListLink-active {
+  background-color: #ece9f6;
+  color: var(--mainColor);
+}
+
+.sideNav_subListLink-active:hover {
+  background-color: #e6e0f7;
+}
+
+.sideNav_openIndicator {
+  position: absolute;
+  right: 15px;
+  top: 8px;
+  font-size: 19px;
 }
