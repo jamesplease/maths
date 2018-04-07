@@ -3,25 +3,26 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.5rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.6rem;
 }
 
 .markdown {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   line-height: 2.6rem;
 }
 
 a {
-  color: var(--mainColor);
+  color: var(--linkColor);
   text-decoration: none;
 }
 
 .markdown h1,
 .primaryHeader {
-  font-family: 'Abhaya Libre';
-  font-size: 3.1rem;
+  font-size: 3rem;
   font-weight: 600;
+  line-height: 3.5rem;
+  margin-bottom: 15px;
 }
 
 .markdown h1:first-child,

@@ -1,0 +1,27 @@
+{
+  "name": "Principia",
+  "description": "A free reference site for subjects in math and science.",
+  "repository": "https://github.com/jamesplease/principia",
+  "keywords": [
+    "physics",
+    "mathematics",
+    "math",
+    "philosophy",
+    "logic",
+    "education",
+    "learn",
+    "science"
+  ],
+  "env": {
+    "NPM_CONFIG_PRODUCTION": {
+      "description":
+        "Ensures that all dependencies on installed during deployment.",
+      "value": "false"
+    },
+    "BUILD_ASSETS": {
+      "description":
+        "Don't change this! Ensures that Heroku builds the app on deploy.",
+      "value": "true"
+    }
+  }
+}

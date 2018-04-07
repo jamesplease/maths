@@ -5,11 +5,20 @@
   align-items: center;
   padding: 0 var(--appPadding);
   grid-area: header;
+  position: fixed;
+  background: #fff;
+  z-index: 1;
+  width: 100%;
 }
 
 .header_link {
   text-decoration: none;
   color: #222;
+}
+
+.logo_emoji {
+  font-size: 2.3rem;
+  padding-right: 8px;
 }
 
 .header_title {
