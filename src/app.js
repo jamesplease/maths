@@ -7,6 +7,7 @@ import Footer from './common/footer';
 import notFoundUrl from './common/not-found.md';
 import Markdown from './common/markdown';
 import introductionUrl from './pages/introduction.md';
+import Introduction from './pages/introduction';
 import TopicRoutes from './topics/routes';
 
 class App extends Component {
@@ -23,7 +24,7 @@ render() {
                 render={() => (
                   <Fragment>
                     <main className="mainContent mainContent_noNav">
-                      <Markdown markdownUrl={introductionUrl} />
+                      <Introduction/>
                     </main>
                     <Footer noSideNav />
                   </Fragment>

@@ -57,17 +57,17 @@
 }
 
 .sideNav_subListLink:hover {
-  background-color: #ece9f6;
+  background-color: #f9edf0;
   color: var(--mainColor);
 }
 
 .sideNav_subListLink-active {
-  background-color: #ece9f6;
+  background-color: #f9edf0;
   color: var(--mainColor);
 }
 
 .sideNav_subListLink-active:hover {
-  background-color: #e6e0f7;
+  background-color: #f5e1e6;
 }
 
 .sideNav_openIndicator {
