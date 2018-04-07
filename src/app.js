@@ -6,7 +6,6 @@ import Header from './common/header';
 import Footer from './common/footer';
 import notFoundUrl from './common/not-found.md';
 import Markdown from './common/markdown';
-import introductionUrl from './pages/introduction.md';
 import Introduction from './pages/introduction';
 import TopicRoutes from './topics/routes';
 
@@ -43,16 +42,3 @@ render() {
 }
 
 export default App;
-
-// {/* <Route path="/components" component={Components} />
-// <Route component={NotFound} /> */}
-
-
-// <div className="App">
-//         <header className="App-header">
-//           <h1 className="App-title">Welcome to React</h1>
-//         </header>
-//         <img src={wolframAlphaUrl} width="25px" alt="Wolfram|Alpha"/> View in Wolfram Alpha
-//         <Markdown markdownUrl={introductionUrl} />
-//       </div>
-

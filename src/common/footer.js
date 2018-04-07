@@ -11,7 +11,7 @@ export default class Footer extends Component {
     });
 
     return (
-      <footer className="footer">
+      <footer className={footerClass}>
         Principia © 2018.
       </footer>
     );

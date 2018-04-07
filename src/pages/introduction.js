@@ -4,7 +4,7 @@ export default class Introduction extends Component {
   render() {
     return (
       <section className="hero-section">
-        <span className="hero-emoji">
+        <span className="hero-emoji" role="img" aria-label="wave">
           👋
         </span>
         <h1 className="hero-heading">

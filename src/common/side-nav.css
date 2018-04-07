@@ -1,14 +1,14 @@
 .sideNav {
-  /* width: var(--sideNavWidth);
-  position: fixed;
-  top: var(--headerHeight);
-  left: 0;
-  height: calc(100% - var(--headerHeight)); */
   background-color: #f9f9f9;
   grid-area: sidenav;
   margin: 0;
   padding-top: var(--headerMargin);
-  /* padding: var(--headerMargin) var(--appPadding) 30px; */
+  position: fixed;
+  left: 0;
+  top: var(--headerHeight);
+  width: 300px;
+  z-index: 1;
+  height: calc(100% - var(--headerHeight));
 }
 
 .sideNav_subList,
@@ -51,7 +51,8 @@
   color: #333;
   font-size: 1.5rem;
   display: block;
-  padding: 7px var(--appPadding) 7px 46px;
+  padding: 6px var(--appPadding) 6px 46px;
+  margin: 3px 0;
   line-height: 2.2rem;
   position: relative;
 }

@@ -40,6 +40,16 @@ Many useful mathematical objects are built off of sets, including fields, groups
 
 - ["Set theory" on Wikipedia](https://en.wikipedia.org/wiki/Set_theory)
 
+## Test
+
+Inline math: `\int_0^\infty x^2 dx`
+
+Block math:
+
+```latex
+\int_0^\infty x^2 dx
+```
+
 ## Lorem Ipsum
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean finibus, magna quis ornare interdum, odio orci mattis erat, in semper odio purus vitae lorem. Morbi in consectetur velit, non blandit nulla. Nullam posuere sodales lorem, in ultricies velit tristique nec. Praesent luctus nisl sit amet pharetra tempus. Praesent porttitor metus et consectetur molestie. Morbi euismod mauris eu nunc consectetur convallis. Vestibulum et rhoncus est. Suspendisse porttitor porta ante eu dictum. Praesent purus enim, rhoncus sed luctus in, interdum posuere nisi. Phasellus a massa et tortor porta rutrum ac eu ligula. In felis nisl, sagittis vel quam ut, mollis tincidunt augue. Aliquam erat volutpat. Suspendisse euismod, velit et gravida volutpat, quam urna pretium lorem, eget pellentesque orci metus ac orci.

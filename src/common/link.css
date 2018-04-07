@@ -1,6 +1,6 @@
 .link_wikipediaLink {
   position: relative;
-  border-bottom: 1px dashed var(--mainColor);
+  border-bottom: 1px dashed var(--linkColor);
 }
 
 .link_wikipediaLogo {
