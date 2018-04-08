@@ -8,7 +8,9 @@ module.exports = {
       // Material Design Icon font
       'cdn.materialdesignicons.com',
       // Google fonts
-      'fonts.googleapis.com'
+      'fonts.googleapis.com',
+      // KaTeX
+      "'unsafe-inline'"
     ],
     fontSrc: [
       "'self'",
