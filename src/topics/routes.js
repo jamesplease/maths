@@ -19,7 +19,6 @@ function sectionWithNav(component, navProps) {
 }
 
 function routesFromSection(section) {
-  console.log('wat', section);
   const landingPageRoute = (
     <Route
         key={`${section.sectionName}-index`}
