@@ -19,7 +19,7 @@
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -42,13 +42,13 @@ body {
 }
 
 #root {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-areas:
       "header header"
       "sidenav main"
       "sidenav footer";
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: minmax(250px, 300px) minmax(550px, 2fr);
     grid-template-rows: var(--headerHeight) 10fr var(--footerHeight);
 }
 

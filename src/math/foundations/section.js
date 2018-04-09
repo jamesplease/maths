@@ -1,18 +1,15 @@
 import React from 'react';
 import landingPageUrl from './index.md';
+import Markdown from '../../common/markdown';
 import setUrl from './pages/set.md';
 import setTheoryUrl from './pages/set-theory.md';
 import imaginaryNumbersUrl from './pages/imaginary-numbers.md';
 import TopicPage from '../topic-page';
-import LandingPage from '../landing-page';
 
 export default {
   sectionKey: 'foundations',
   sectionName: 'Mathematics',
-  landingPageComponent: (props) => (
-    <LandingPage
-      markdownUrl={landingPageUrl}
-      {...props}/>),
+  landingPageComponent: () => (<Markdown markdownUrl={landingPageUrl}/>),
   topics: [
     {
       name: 'Set',

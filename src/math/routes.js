@@ -5,6 +5,7 @@ import indexPageUrl from './index.md';
 import foundationsSection from './foundations/section';
 import linearAlgebraSection from './linear-algebra/section';
 import routesFromSection from '../common/utils/routes-from-section';
+import notFoundUrl from "../common/not-found.md";
 
 export default (props) => {
   const {match} = props;
@@ -18,6 +19,13 @@ export default (props) => {
       )}/>
       {routesFromSection(foundationsSection, match)}
       {routesFromSection(linearAlgebraSection, match)}
+      <Route
+        render={() => (
+          <main className="mainContent">
+            <Markdown markdownUrl={notFoundUrl}/>
+          </main>
+        )}/>}
+      />
     </Switch>
   );
 }

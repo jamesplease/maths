@@ -6,7 +6,8 @@ import Footer from '../footer';
 import sectionWithNav from './section-with-nav';
 
 export default function routesFromSection(section, match) {
-  const rootUrl = `${match.path}/${section.sectionKey}`;
+  // const rootUrl = `${match.path}/${section.sectionKey}`;
+  const rootUrl = `${match.path}`;
 
   const landingPageRoute = (
     <Route

@@ -3,14 +3,10 @@
   grid-area: sidenav;
   margin: 0;
   padding-top: var(--headerMargin);
-  position: fixed;
+  position: sticky;
   left: 0;
   top: var(--headerHeight);
-  z-index: 1;
-  height: calc(100% - var(--headerHeight));
-  width: 33vw;
-  min-width: 200px;
-  max-width: 300px;
+  height: calc(100vh - var(--headerHeight));
 }
 
 .sideNav_subList,
