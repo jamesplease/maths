@@ -1,10 +1,8 @@
 import React, { Fragment } from 'react';
-import { Switch, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import DocumentTitle from 'react-document-title';
-import SideNav from '../common/side-nav';
-import Footer from '../common/footer';
-import foundationsSection from './foundations/section';
-import linearAlgebraSection from './linear-algebra/section';
+import SideNav from '../side-nav';
+import Footer from '../footer';
 
 function sectionWithNav(component, navProps) {
   return (
@@ -15,15 +13,15 @@ function sectionWithNav(component, navProps) {
       </main>
       <Footer />
     </Fragment>
-  )
+  );
 }
 
-function routesFromSection(section) {
+export default function routesFromSection(section, match) {
   const landingPageRoute = (
     <Route
         key={`${section.sectionName}-index`}
         exact
-        path={`/${section.sectionKey}`}
+        path={`${match.path}/${section.sectionKey}`}
         render={(props) => (
           <DocumentTitle title={`${section.sectionName} - Principia`}>
             {sectionWithNav(<section.landingPageComponent
@@ -42,7 +40,7 @@ function routesFromSection(section) {
       <Route
         key={`${topic.name}-main`}
         exact
-        path={`/${section.sectionKey}${topic.url}`}
+        path={`${match.path}/${section.sectionKey}${topic.url}`}
         render={props => (
           <DocumentTitle title={`${topic.name} - Principia`}>
             {sectionWithNav(<topic.component
@@ -63,13 +61,4 @@ function routesFromSection(section) {
     landingPageRoute,
     ...topics
   ];
-}
-
-export default (props) => {
-  return (
-    <Switch>
-      {routesFromSection(foundationsSection)}
-      {routesFromSection(linearAlgebraSection)}
-    </Switch>
-  );
 }

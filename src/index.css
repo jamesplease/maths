@@ -69,12 +69,11 @@ body {
     width: 100%;
     max-width: 780px;
     padding: 0 15px;
-    margin: var(--headerMargin) auto 30px;
+    margin: var(--headerMargin) auto 60px;
   }
 
   #root {
     height: 100vh;
-  
     display: grid;
     grid-template-areas:
         "header"

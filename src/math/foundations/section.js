@@ -7,7 +7,7 @@ import TopicPage from '../topic-page';
 import LandingPage from '../landing-page';
 
 export default {
-  sectionKey: 'math',
+  sectionKey: 'foundations',
   sectionName: 'Mathematics',
   landingPageComponent: (props) => (
     <LandingPage
@@ -15,8 +15,8 @@ export default {
       {...props}/>),
   topics: [
     {
-      name: 'Sets',
-      url: '/sets',
+      name: 'Set',
+      url: '/set',
       component: TopicPage,
       markdownUrl: setUrl
     },
@@ -27,8 +27,8 @@ export default {
       markdownUrl: setTheoryUrl
     },
     {
-      name: 'Imaginary Numbers',
-      url: '/imaginary-numbers',
+      name: 'Imaginary Number',
+      url: '/imaginary-number',
       component: TopicPage,
       markdownUrl: imaginaryNumbersUrl
     }

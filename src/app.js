@@ -8,7 +8,9 @@ import Footer from './common/footer';
 import notFoundUrl from './common/not-found.md';
 import Markdown from './common/markdown';
 import Introduction from './pages/introduction';
-import TopicRoutes from './topics/routes';
+import MathRoutes from './math/routes';
+import PhysicsRoutes from './physics/routes';
+import PhilosophyRoutes from './philosophy/routes';
 
 class App extends Component {
 render() {
@@ -30,7 +32,9 @@ render() {
                   </Fragment>
                 )}
               />
-              <Route component={TopicRoutes}/>
+              <Route path="/math" component={MathRoutes}/>
+              <Route path="/physics" component={PhysicsRoutes}/>
+              <Route path="/philosophy" component={PhilosophyRoutes}/>
               <Route
                 render={() => <Markdown markdownUrl={notFoundUrl} />}
               />
