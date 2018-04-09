@@ -6,7 +6,6 @@
   position: fixed;
   left: 0;
   top: var(--headerHeight);
-  width: 300px;
   z-index: 1;
   height: calc(100% - var(--headerHeight));
 }
@@ -83,4 +82,10 @@
 
 .sideNav_openIndicator-closed {
   transform: rotate(-90deg);
+}
+
+@media (max-width: 650px) {
+  .sideNav {
+    display: none;
+  }
 }

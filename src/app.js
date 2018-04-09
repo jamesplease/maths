@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
 import ScrollToTop from './common/scroll-to-top';
 import Header from './common/header';
+import Nav from './common/nav';
 import Footer from './common/footer';
 import notFoundUrl from './common/not-found.md';
 import Markdown from './common/markdown';
@@ -34,6 +35,7 @@ render() {
                 render={() => <Markdown markdownUrl={notFoundUrl} />}
               />
             </Switch>
+            <Nav isBottom/>
           </ScrollToTop>
         </BrowserRouter>
       </DocumentTitle>

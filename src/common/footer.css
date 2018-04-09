@@ -7,3 +7,9 @@
   grid-area: footer;
   grid-column: span 2;
 }
+
+@media (max-width: 650px) {
+  .footer {
+    display: none;
+  }
+}

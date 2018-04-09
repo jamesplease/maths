@@ -17,8 +17,10 @@
 }
 
 .logo_emoji {
-  font-size: 2.3rem;
-  padding-right: 8px;
+  font-size: 2.2rem;
+  padding-right: 5px;
+  position: relative;
+  top: -1px;
 }
 
 .header_title {
@@ -28,4 +30,20 @@
   margin: 0;
   margin-right: 50px;
   font-size: 2.9rem;
+}
+
+@media (max-width: 650px) {
+  .header_title {
+    margin: 0 auto;
+  }
+
+  .header {
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .header .nav {
+    display: none;
+  }
 }

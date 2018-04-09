@@ -21,7 +21,8 @@
 .hero-paragraph {
   font-size: 28px;
   max-width: 550px;
-  margin: 0 auto 60px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
 }
 
 .hero-button {
@@ -31,8 +32,40 @@
   padding: 15px 43px;
   border: 0;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 600;
+  color: #fff;
+  position: relative;
   background-image: linear-gradient(134deg, #f70081 0%, #ff9503 100%);
   box-shadow: 0 11px 33px -11px rgba(255,98,98,0.80);
-  color: #fff;
+}
+
+.hero-button:hover {
+  /* Forgive me Javi */
+  box-shadow: 0 4px 33px -5px rgba(255,98,98,0.80);
+}
+
+@media (max-width: 650px) {
+  .hero-section {
+    margin-top: 6vh;
+  }
+
+  .hero-emoji {
+    font-size: 42px;
+    margin-bottom: 0;
+  }
+
+  .hero-heading {
+    font-size: 42px;
+    margin-bottom: 15px;
+  }
+
+  .hero-paragraph {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .hero-button {
+    padding: 14px 35px;
+    font-size: 20px;
+  }
 }

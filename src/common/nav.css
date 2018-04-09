@@ -1,3 +1,7 @@
+.nav_bottom {
+  display: none;
+}
+
 .nav_list {
   list-style: none;
   margin: 0;
@@ -26,4 +30,52 @@
 .nav_link.active {
   color: var(--mainColor);
   border-bottom: 3px solid var(--mainColor);
+}
+
+@media (max-width: 650px) {
+  .nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fafafa;
+    height: 50px;
+    border-top: 1px solid #ddd;
+    padding: 0;
+  }
+
+  .nav_bottom {
+    display: block;
+  }
+
+  .nav_list {
+    height: 100%;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  .nav_listItem {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .nav_link {
+    font-size: 1.2rem;
+    height: auto;
+    line-height: normal;
+    text-align: center;
+    color: #666;
+  }
+
+  .nav_linkIcon {
+    display: block;
+    font-size: 2.2rem;
+  }
+
+  .nav_link.active {
+    border-bottom: 0;
+  }
 }

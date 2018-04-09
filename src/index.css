@@ -49,6 +49,38 @@ body {
       "header header"
       "sidenav main"
       "sidenav footer";
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 2fr 2fr;
     grid-template-rows: var(--headerHeight) 10fr var(--footerHeight);
+}
+
+@media (max-width: 650px) {
+  :root {
+    --appWidth: 960px;
+    --appPadding: 15px;
+    --headerHeight: 50px;
+    --footerHeight: 40px;
+    --headerMargin: 15px;
+    --sideNavWidth: 300px;
+    --sideNavMargin: 60px;
+  }
+
+  .mainContent {
+    grid-area: main;
+    width: 100%;
+    max-width: 780px;
+    padding: 0 15px;
+    margin: var(--headerMargin) auto 30px;
+  }
+
+  #root {
+    height: 100vh;
+  
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: var(--headerHeight) 10fr var(--footerHeight);
+  }
 }

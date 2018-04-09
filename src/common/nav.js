@@ -1,27 +1,55 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import classnames from 'classnames';
 import './nav.css';
+
+const navItems = [
+  {
+    key: 'math',
+    label: 'Mathematics',
+    icon: 'zmdi-shape'
+  },
+  {
+    key: 'physics',
+    label: 'Physics',
+    icon: 'zmdi-globe'
+  },
+  {
+    key: 'philosophy',
+    label: 'Philosophy',
+    icon: 'zmdi-balance'
+  },
+  // Maybe? If not here, where else?
+  // {
+  //   key: 'about',
+  //   label: 'About',
+  //   icon: 'zmdi-info-outline'
+  // }
+];
 
 export default class Nav extends Component {
   render() {
+    const { isBottomNav } = this.props;
+
+    const className = classnames('nav', {
+      'nav-bottom': isBottomNav
+    });
+
+    const linkClass = classnames('nav_link', {
+      'nav_link-bottomLink': isBottomNav
+    });
+
     return (
-      <nav className="nav">
+      <nav className={className}>
         <ul className="nav_list">
-          <li className="nav_listItem">
-            <NavLink to="/math" className="nav_link">
-              Mathematics
-            </NavLink>
-          </li>
-          <li className="nav_listItem">
-            <NavLink to="/physics" className="nav_link">
-              Physics
-            </NavLink>
-          </li>
-          <li className="nav_listItem">
-            <NavLink to="/philosophy" className="nav_link">
-              Philosophy
-            </NavLink>
-          </li>
+          {navItems.map(navItem => (
+            <li className="nav_listItem" key={navItem.key}>
+              <NavLink to={`/${navItem.key}`} className={linkClass}>
+                <i className={`zmdi ${navItem.icon} nav_linkIcon`} />
+                {navItem.label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
     );

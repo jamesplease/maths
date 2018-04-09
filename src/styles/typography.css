@@ -40,3 +40,9 @@ a {
 .tertiaryHeader {
   font-weight: 600;
 }
+
+@media (max-width: 650px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
