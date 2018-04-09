@@ -5,7 +5,7 @@ import './side-nav.css';
 
 export default class SideNav extends Component {
   render() {
-    const {section} = this.props;
+    const {section, rootUrl} = this.props;
     const { topicsOpen, guidesOpen } = this.state;
 
     const {topics = [], guides = []} = section;
@@ -35,7 +35,7 @@ export default class SideNav extends Component {
                   <li key={topic.name}  className="sideNav_subListItem">
                     <NavLink
                       activeClassName="sideNav_subListLink-active"
-                      to={`/${section.sectionKey}${topic.url}`}
+                      to={`${rootUrl}${topic.url}`}
                       className="sideNav_subListLink">
                       {topic.name}
                     </NavLink>
@@ -58,7 +58,7 @@ export default class SideNav extends Component {
                   <li key={guide.name}  className="sideNav_subListItem">
                     <NavLink
                       activeClassName="sideNav_subListLink-active"
-                      to={`/${section.sectionKey}${guide.url}`}
+                      to={`${rootUrl}${guide.url}`}
                       className="sideNav_subListLink">
                       {guide.name}
                     </NavLink>

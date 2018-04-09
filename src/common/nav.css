@@ -32,6 +32,10 @@
   border-bottom: 3px solid var(--mainColor);
 }
 
+.nav_linkIcon {
+  display: none;
+}
+
 @media (max-width: 650px) {
   .nav {
     position: fixed;

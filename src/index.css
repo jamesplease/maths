@@ -32,7 +32,7 @@ body {
   grid-area: main;
   width: 100%;
   max-width: 780px;
-  padding: 0 40px;
+  padding: 0 30px;
   margin: var(--headerMargin) auto 30px;
 }
 
@@ -43,13 +43,12 @@ body {
 
 #root {
   height: 100vh;
-
   display: grid;
   grid-template-areas:
       "header header"
       "sidenav main"
       "sidenav footer";
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: var(--headerHeight) 10fr var(--footerHeight);
 }
 
@@ -79,7 +78,7 @@ body {
         "header"
         "main"
         "footer";
-      grid-template-columns: 1fr;
-      grid-template-rows: var(--headerHeight) 10fr var(--footerHeight);
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--headerHeight) 10fr var(--footerHeight);
   }
 }

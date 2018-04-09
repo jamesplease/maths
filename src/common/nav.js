@@ -29,14 +29,14 @@ const navItems = [
 
 export default class Nav extends Component {
   render() {
-    const { isBottomNav } = this.props;
+    const { isBottom } = this.props;
 
     const className = classnames('nav', {
-      'nav-bottom': isBottomNav
+      'nav_bottom': isBottom
     });
 
     const linkClass = classnames('nav_link', {
-      'nav_link-bottomLink': isBottomNav
+      'nav_link-bottomLink': isBottom
     });
 
     return (

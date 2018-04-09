@@ -8,6 +8,9 @@
   top: var(--headerHeight);
   z-index: 1;
   height: calc(100% - var(--headerHeight));
+  width: 33vw;
+  min-width: 200px;
+  max-width: 300px;
 }
 
 .sideNav_subList,

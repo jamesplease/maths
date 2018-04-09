@@ -3,36 +3,28 @@ import { Route } from "react-router-dom";
 import DocumentTitle from 'react-document-title';
 import SideNav from '../side-nav';
 import Footer from '../footer';
-
-function sectionWithNav(component, navProps) {
-  return (
-    <Fragment>
-      <SideNav {...navProps}/>
-      <main className="mainContent">
-        {component}
-      </main>
-      <Footer />
-    </Fragment>
-  );
-}
+import sectionWithNav from './section-with-nav';
 
 export default function routesFromSection(section, match) {
+  const rootUrl = `${match.path}/${section.sectionKey}`;
+
   const landingPageRoute = (
     <Route
-        key={`${section.sectionName}-index`}
-        exact
-        path={`${match.path}/${section.sectionKey}`}
-        render={(props) => (
-          <DocumentTitle title={`${section.sectionName} - Principia`}>
-            {sectionWithNav(<section.landingPageComponent
-              {...props}/>, {
-                section,
-                ...props
-              })
-            }
-          </DocumentTitle>
-        )}
-      />
+      key={`${section.sectionName}-index`}
+      exact
+      path={rootUrl}
+      render={(props) => (
+        <DocumentTitle title={`${section.sectionName} - Principia`}>
+          {sectionWithNav(<section.landingPageComponent
+            {...props}/>, {
+              section,
+              rootUrl,
+              ...props
+            })
+          }
+        </DocumentTitle>
+      )}
+    />
   );
 
   const topics = section.topics.map(topic => {
@@ -40,7 +32,7 @@ export default function routesFromSection(section, match) {
       <Route
         key={`${topic.name}-main`}
         exact
-        path={`${match.path}/${section.sectionKey}${topic.url}`}
+        path={`${rootUrl}${topic.url}`}
         render={props => (
           <DocumentTitle title={`${topic.name} - Principia`}>
             {sectionWithNav(<topic.component
@@ -49,6 +41,7 @@ export default function routesFromSection(section, match) {
               sectionUrl={`/${section.sectionKey}`}
               sectionName={section.sectionName} />, {
                 section,
+                rootUrl,
                 ...props
               })}
           </DocumentTitle>
