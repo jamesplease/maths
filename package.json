@@ -21,7 +21,9 @@
   "scripts": {
     "start": "node server/index.js",
     "watch": "react-scripts start",
-    "build": "react-scripts build",
+    "build-app": "react-scripts build",
+    "build": "npm run build-app && node ./scripts/update-service-worker",
+    "run-production-server": "npm run build && npx serve -s build",
     "test": "react-scripts test --env=jsdom",
     "postinstall": "if [ $BUILD_ASSETS ]; then npm run build; fi",
     "release": "heroku pipelines:promote -r staging"
