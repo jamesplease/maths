@@ -1,0 +1,35 @@
+
+
+@media all and (display-mode: standalone) {
+  /*
+    This disables the iOS "grey box" that appears when
+    buttons or links are tapped
+  */
+  a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+
+  /*
+    Native apps typically do not allow users to select text
+  */
+  *,
+  *:before,
+  *:after {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /*
+    Sometimes, we will want text to be selectable.
+  */
+  .selectable {
+    -moz-user-select: auto;
+    -khtml-user-select: auto;
+    -webkit-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+  }
+}
