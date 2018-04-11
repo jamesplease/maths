@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
 import ScrollToTop from './common/scroll-to-top';
 import Header from './common/header';
@@ -20,6 +20,7 @@ render() {
           <ScrollToTop>
             <Header />
             <Switch>
+            <Redirect from='/index.html' to='/'/>
               <Route
                 exact
                 path="/"
