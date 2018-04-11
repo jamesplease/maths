@@ -1,4 +1,8 @@
-
+/*
+  These styles apply when the page is opened as a standalone
+  app, such as when it is saved to a user's home screen
+  on their mobile device.
+*/
 
 @media all and (display-mode: standalone) {
   /*
